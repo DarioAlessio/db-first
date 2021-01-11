@@ -1,0 +1,14 @@
+           STUDENTE
+---------------------------
+id            |    integer
+---------------------------
+Nome          |    string
+Cognome       |    string
+Anni          |    integer
+Classe        |    integer
+Sesso         |    string
+Nazionalità   |    string
+Telefono      |    integer
+Email         |    string
+---------------------------
+
