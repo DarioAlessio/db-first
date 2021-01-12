@@ -39,6 +39,6 @@ Ad ogni prenotazione  evono essere associati tutti gli ospiti della stanza.
                                                                       | id             bigInt  |
                                                                       | name_guest     string  |
                                                                       | email_guest    string  |
-                                                                      | fiscal Code    integer |
+                                                                      | fiscal_code    integer |
                                                                       | phone_guest    string  |
                                                                       |________________________|
