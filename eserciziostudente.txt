@@ -1,14 +1,44 @@
-           STUDENTE
----------------------------
-id            |    integer
----------------------------
-Nome          |    string
-Cognome       |    string
-Anni          |    integer
-Classe        |    integer
-Sesso         |    string
-Nazionalità   |    string
-Telefono      |    integer
-Email         |    string
----------------------------
+GOAL:
+Provare a strutturare il seguente database che modellizza un hotel: 
+ci sono varie stanze, ognuna con le proprie caratteristiche. 
+Le diverse stanze vengono prenotate per periodi di tempo, da ospiti.
+Ad ogni prenotazione  evono essere associati tutti gli ospiti della stanza.
 
+
+               ______________________________                          ______________________
+               |           HOTELS            |                         |       ROOMS         |
+               |-----------------------------                          |---------------------|
+               | id              |   bigInt  |                         |id            bigInt |
+               | Name_hotel      |   string  |                         |hotel(id)     bigInt |
+               | Phone_hotel     |   string  | 1..1              0..n  |Number_room   integer|
+               | Address         |   string  |-------------------------|Rate          string |
+	       | City            |   string  |                         ________________________
+	       | Email           |   string  |                                    |0..n
+	       | State           |   string  |                                    |
+                _____________________________                                     |
+                                                                                  |
+                                                                                  |
+                                                                                  |
+                                                                       ___________|0..1________
+                                                                      |   RESERVATIONS         |
+                                                                      | ---------------------- |
+                                                                      | id             bigInt  |
+                                                                      | room(id)       bigInt  |
+                                                                      | guest(id)      bigInt  |
+                                                                      | Date_start     integer |
+                                                                      | date_end       integer |
+                                                                      |________________________|
+                                                                                  |1..n
+	                                                                          |                                  
+                                                                                  |
+                                                                                  |
+                                                                                  |
+                                                                       ___________|1..n________
+                                                                      |         GUESTS         |
+                                                                      | ---------------------- |
+                                                                      | id             bigInt  |
+                                                                      | Name_guest     string  |
+                                                                      | Email_guest    string  |
+                                                                      | fiscal Code    integer |
+                                                                      | Phone_guest    string  |
+                                                                      |________________________|
