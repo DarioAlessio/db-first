@@ -9,12 +9,12 @@ Ad ogni prenotazione  evono essere associati tutti gli ospiti della stanza.
                |           HOTELS            |                         |       ROOMS         |
                |-----------------------------                          |---------------------|
                | id              |   bigInt  |                         |id            bigInt |
-               | Name_hotel      |   string  |                         |hotel(id)     bigInt |
-               | Phone_hotel     |   string  | 1..1              0..n  |Number_room   integer|
-               | Address         |   string  |-------------------------|Rate          string |
-	       | City            |   string  |                         ________________________
-	       | Email           |   string  |                                    |0..n
-	       | State           |   string  |                                    |
+               | name_hotel      |   string  |                         |hotel(id)     bigInt |
+               | phone_hotel     |   string  | 1..1              0..n  |number_room   integer|
+               | address         |   string  |-------------------------|rate          string |
+	       | city            |   string  |                         ________________________
+	       | email           |   string  |                                    |0..n
+	       | state           |   string  |                                    |
                 _____________________________                                     |
                                                                                   |
                                                                                   |
@@ -25,8 +25,8 @@ Ad ogni prenotazione  evono essere associati tutti gli ospiti della stanza.
                                                                       | id             bigInt  |
                                                                       | room(id)       bigInt  |
                                                                       | guest(id)      bigInt  |
-                                                                      | Date_start     integer |
-                                                                      | date_end       integer |
+                                                                      | date_start     date    |
+                                                                      | date_end       date    |
                                                                       |________________________|
                                                                                   |1..n
 	                                                                          |                                  
@@ -37,8 +37,8 @@ Ad ogni prenotazione  evono essere associati tutti gli ospiti della stanza.
                                                                       |         GUESTS         |
                                                                       | ---------------------- |
                                                                       | id             bigInt  |
-                                                                      | Name_guest     string  |
-                                                                      | Email_guest    string  |
+                                                                      | name_guest     string  |
+                                                                      | email_guest    string  |
                                                                       | fiscal Code    integer |
-                                                                      | Phone_guest    string  |
+                                                                      | phone_guest    string  |
                                                                       |________________________|
